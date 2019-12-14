@@ -8,3 +8,9 @@ class Product(models.Model):
                                  on_delete=models.SET_NULL)
     name = models.CharField("商品名", max_length=128)
     price = models.PositiveIntegerField("価格")
+
+    def __str__(self):
+        return self.name
+
+    class Mtea:
+        verbose_name_plural = 'Products'
